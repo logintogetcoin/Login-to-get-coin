@@ -39,8 +39,6 @@
   /* Logo boxes */
   .logo-box {
     position: fixed;
-    width: 100px;
-    height: 100px;
     border-radius: 12px;
     overflow: hidden;
     z-index: 5;
@@ -55,31 +53,41 @@
     object-fit: contain;
   }
 
-  /* Perfectly centered top logos */
+  /* Top logos */
   .logo-left-top {
     top: 10%;
     left: calc(25% - 50px);
+    width: 100px;
+    height: 100px;
   }
 
   .logo-right-top {
     top: 10%;
     right: calc(25% - 50px);
+    width: 100px;
+    height: 100px;
   }
 
   .logo-bottom-left {
     bottom: 10%;
     left: 18%;
+    width: 100px;
+    height: 100px;
   }
 
-  /* NEW lower logo boxes under each button */
+  /* Enlarged lower logos */
   .logo-under-tiktok {
     top: calc(10% + 220px);
-    left: calc(25% - 50px);
+    left: calc(25% - 65px); /* perfectly centered below TikTok button */
+    width: 130px;
+    height: 130px;
   }
 
   .logo-under-bitcoin {
     top: calc(10% + 220px);
-    right: calc(25% - 50px);
+    right: calc(25% - 65px); /* perfectly centered below Bitcoin button */
+    width: 130px;
+    height: 130px;
   }
 
   /* Buttons */
@@ -104,10 +112,10 @@
     transform: translateY(-2px);
   }
 
-  /* Button positions */
+  /* Button positions (tweaked for perfect balance) */
   .btn-tiktok {
     top: calc(10% + 130px);
-    left: calc(25% - 95px);
+    left: calc(25% - 105px); /* shifted slightly more left for perfect centering */
   }
 
   .btn-bitcoin {
@@ -120,17 +128,17 @@
     .divider-horizontal { height: 6px; }
     .divider-vertical { width: 6px; }
 
-    .logo-box { width: 70px; height: 70px; }
+    .logo-box { border-width: 2px; }
 
-    .logo-left-top {
-      top: 12%;
-      left: calc(25% - 35px);
+    .logo-left-top,
+    .logo-right-top,
+    .logo-bottom-left {
+      width: 70px;
+      height: 70px;
     }
 
-    .logo-right-top {
-      top: 12%;
-      right: calc(25% - 35px);
-    }
+    .logo-left-top { top: 12%; left: calc(25% - 35px); }
+    .logo-right-top { top: 12%; right: calc(25% - 35px); }
 
     .button {
       font-size: 0.8rem;
@@ -140,7 +148,7 @@
 
     .btn-tiktok {
       top: calc(12% + 100px);
-      left: calc(25% - 75px);
+      left: calc(25% - 85px);
     }
 
     .btn-bitcoin {
@@ -150,12 +158,16 @@
 
     .logo-under-tiktok {
       top: calc(12% + 180px);
-      left: calc(25% - 35px);
+      left: calc(25% - 45px);
+      width: 100px;
+      height: 100px;
     }
 
     .logo-under-bitcoin {
       top: calc(12% + 180px);
-      right: calc(25% - 35px);
+      right: calc(25% - 45px);
+      width: 100px;
+      height: 100px;
     }
   }
 </style>
@@ -179,7 +191,7 @@
     <img src="logo3.png" alt="LegalTenderPay Bottom Left Logo">
   </div>
 
-  <!-- NEW logo boxes under each button -->
+  <!-- Larger logo boxes under buttons -->
   <div class="logo-box logo-under-tiktok">
     <img src="logo4.png" alt="TikTok Lower Logo">
   </div>
