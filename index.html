@@ -98,8 +98,8 @@
     color: #fff;
     border: 2px solid var(--metallic-silver);
     border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 12px 28px;
+    font-size: 1.05rem;
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
@@ -124,10 +124,13 @@
     right: calc(25% - 95px);
   }
 
-  /* New CardTenderPay button near bottom-left logo */
+  /* New CardTenderPay button (shifted down + right + enlarged) */
   .btn-cardpay {
-    bottom: 17%;
-    left: calc(18% + 180px); /* placed to the right of bottom-left logo */
+    bottom: 13%; /* slightly lower */
+    left: calc(18% + 220px); /* shifted right */
+    padding: 14px 36px; /* bigger button */
+    font-size: 1.1rem;
+    border-radius: 12px;
   }
 
   /* Responsive adjustments */
@@ -180,8 +183,10 @@
     }
 
     .btn-cardpay {
-      bottom: 18%;
-      left: calc(10% + 130px);
+      bottom: 14%;
+      left: calc(10% + 160px);
+      padding: 10px 20px;
+      font-size: 0.9rem;
     }
   }
 </style>
