@@ -55,15 +55,15 @@
     object-fit: contain;
   }
 
-  /* Adjusted positions */
+  /* Perfectly centered top logos */
   .logo-left-top {
     top: 10%;
-    left: 24%; /* moved slightly more to the right */
+    left: calc(25% - 50px); /* centered in the left half */
   }
 
   .logo-right-top {
     top: 10%;
-    right: 12%; /* moved slightly more to the left */
+    right: calc(25% - 50px); /* centered in the right half */
   }
 
   .logo-bottom-left {
@@ -71,7 +71,7 @@
     left: 18%;
   }
 
-  /* Buttons with metallic border + glow */
+  /* Buttons */
   .button {
     position: fixed;
     background: linear-gradient(180deg, #ff3333, #cc0000);
@@ -93,15 +93,15 @@
     transform: translateY(-2px);
   }
 
-  /* Button positions */
+  /* Perfectly centered under each logo */
   .btn-tiktok {
-    top: 25%;
-    left: 11%; /* shifted a bit further to the left */
+    top: calc(10% + 120px);
+    left: calc(25% - 75px);
   }
 
   .btn-bitcoin {
-    top: 25%;
-    right: 15%;
+    top: calc(10% + 120px);
+    right: calc(25% - 75px);
   }
 
   /* Responsive adjustments */
@@ -111,9 +111,15 @@
 
     .logo-box { width: 70px; height: 70px; }
 
-    .logo-left-top { top: 12%; left: 14%; }
-    .logo-right-top { top: 12%; right: 12%; }
-    .logo-bottom-left { bottom: 15%; left: 10%; }
+    .logo-left-top {
+      top: 12%;
+      left: calc(25% - 35px);
+    }
+
+    .logo-right-top {
+      top: 12%;
+      right: calc(25% - 35px);
+    }
 
     .button {
       font-size: 0.8rem;
@@ -121,8 +127,15 @@
       border-radius: 8px;
     }
 
-    .btn-tiktok { top: 27%; left: 8%; }
-    .btn-bitcoin { top: 27%; right: 8%; }
+    .btn-tiktok {
+      top: calc(12% + 90px);
+      left: calc(25% - 55px);
+    }
+
+    .btn-bitcoin {
+      top: calc(12% + 90px);
+      right: calc(25% - 55px);
+    }
   }
 </style>
 </head>
