@@ -3,17 +3,22 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Red Divider Page</title>
+<title>LegalTenderPay</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { height: 100%; background: #fff; font-family: system-ui; }
 
-  /* Red divider lines */
+  /* Metallic silver-gray color (matches your logo) */
+  :root {
+    --logo-color: #9ea0a3;
+  }
+
+  /* Divider lines */
   .divider-horizontal {
     position: fixed;
     left: 0;
     right: 0;
-    top: 60%; /* Shifted down (was 50%) */
+    top: 65%; /* shifted further down */
     height: 10px;
     background: red;
     transform: translateY(-50%);
@@ -24,57 +29,53 @@
     position: fixed;
     left: 50%;
     top: 0;
-    bottom: 40%; /* Ends right where horizontal starts */
+    bottom: 35%; /* aligns with horizontal line */
     width: 10px;
     background: red;
     transform: translateX(-50%);
     z-index: 2;
   }
 
-  /* Simple navigation at top */
-  .nav {
+  /* Centered single link */
+  .link-container {
     position: fixed;
-    top: 12px;
-    left: 12px;
-    z-index: 10;
-    display: flex;
-    gap: 8px;
-    background: rgba(255,255,255,0.9);
-    padding: 8px;
-    border-radius: 8px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
   }
 
-  .nav a {
+  a.main-link {
     text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    color: red;
-    border: 1px solid rgba(255,0,0,0.2);
+    color: var(--logo-color);
+    font-size: 1.6rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
   }
 
-  .nav a:hover {
-    background: rgba(255,0,0,0.1);
+  a.main-link:hover {
+    color: #6f7174;
   }
 
+  /* Responsive lines for smaller screens */
   @media (max-width: 420px) {
     .divider-horizontal { height: 6px; }
     .divider-vertical { width: 6px; }
+    a.main-link { font-size: 1.3rem; }
   }
 </style>
 </head>
 <body>
 
+  <!-- Red T Divider -->
   <div class="divider-horizontal"></div>
   <div class="divider-vertical"></div>
 
-  <nav class="nav">
-    <a href="#top">Top</a>
-    <a href="#middle">Middle</a>
-    <a href="#bottom">Bottom</a>
-  </nav>
+  <!-- Center Link -->
+  <div class="link-container">
+    <a href="#" class="main-link">LegalTenderPay</a>
+  </div>
 
 </body>
 </html>
