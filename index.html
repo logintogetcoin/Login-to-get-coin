@@ -10,7 +10,7 @@
 
   /* Metallic silver-gray color (matches your logo) */
   :root {
-    --logo-color: #9ea0a3;
+    --metallic-silver: #9ea0a3;
   }
 
   /* Divider lines */
@@ -20,7 +20,7 @@
     right: 0;
     top: 65%; /* shifted further down */
     height: 10px;
-    background: red;
+    background: var(--metallic-silver);
     transform: translateY(-50%);
     z-index: 2;
   }
@@ -31,51 +31,28 @@
     top: 0;
     bottom: 35%; /* aligns with horizontal line */
     width: 10px;
-    background: red;
+    background: var(--metallic-silver);
     transform: translateX(-50%);
     z-index: 2;
   }
 
-  /* Centered single link */
-  .link-container {
-    position: fixed;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-  }
-
-  a.main-link {
-    text-decoration: none;
-    color: var(--logo-color);
-    font-size: 1.6rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: color 0.3s;
-  }
-
-  a.main-link:hover {
-    color: #6f7174;
+  /* Add subtle metallic gradient effect */
+  .divider-horizontal, .divider-vertical {
+    background: linear-gradient(90deg, #c0c1c3, #9ea0a3, #c0c1c3);
   }
 
   /* Responsive lines for smaller screens */
   @media (max-width: 420px) {
     .divider-horizontal { height: 6px; }
     .divider-vertical { width: 6px; }
-    a.main-link { font-size: 1.3rem; }
   }
 </style>
 </head>
 <body>
 
-  <!-- Red T Divider -->
+  <!-- Silver Metallic T Divider -->
   <div class="divider-horizontal"></div>
   <div class="divider-vertical"></div>
-
-  <!-- Center Link -->
-  <div class="link-container">
-    <a href="#" class="main-link">LegalTenderPay</a>
-  </div>
 
 </body>
 </html>
