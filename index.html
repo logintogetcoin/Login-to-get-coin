@@ -8,7 +8,6 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { height: 100%; background: #fff; font-family: system-ui; }
 
-  /* Metallic silver-gray color (matches your logo) */
   :root {
     --metallic-silver: #9ea0a3;
   }
@@ -18,9 +17,9 @@
     position: fixed;
     left: 0;
     right: 0;
-    top: 65%; /* shifted further down */
+    top: 65%;
     height: 10px;
-    background: var(--metallic-silver);
+    background: linear-gradient(90deg, #c0c1c3, #9ea0a3, #c0c1c3);
     transform: translateY(-50%);
     z-index: 2;
   }
@@ -29,22 +28,61 @@
     position: fixed;
     left: 50%;
     top: 0;
-    bottom: 35%; /* aligns with horizontal line */
+    bottom: 35%;
     width: 10px;
-    background: var(--metallic-silver);
+    background: linear-gradient(180deg, #c0c1c3, #9ea0a3, #c0c1c3);
     transform: translateX(-50%);
     z-index: 2;
   }
 
-  /* Add subtle metallic gradient effect */
-  .divider-horizontal, .divider-vertical {
-    background: linear-gradient(90deg, #c0c1c3, #9ea0a3, #c0c1c3);
+  /* Logo boxes */
+  .logo-box {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 5;
+    background: #f3f3f3;
+    border: 3px solid var(--metallic-silver);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   }
 
-  /* Responsive lines for smaller screens */
+  .logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Positions */
+  .logo-left-top {
+    top: 40%;
+    left: 18%;
+  }
+
+  .logo-right-top {
+    top: 40%;
+    right: 18%;
+  }
+
+  .logo-bottom-left {
+    bottom: 10%;
+    left: 18%;
+  }
+
+  /* Responsive adjustments */
   @media (max-width: 420px) {
     .divider-horizontal { height: 6px; }
     .divider-vertical { width: 6px; }
+
+    .logo-box {
+      width: 70px;
+      height: 70px;
+    }
+
+    .logo-left-top { top: 45%; left: 10%; }
+    .logo-right-top { top: 45%; right: 10%; }
+    .logo-bottom-left { bottom: 15%; left: 10%; }
   }
 </style>
 </head>
@@ -53,6 +91,19 @@
   <!-- Silver Metallic T Divider -->
   <div class="divider-horizontal"></div>
   <div class="divider-vertical"></div>
+
+  <!-- Logo Boxes (Replace image sources with your actual logo files) -->
+  <div class="logo-box logo-left-top">
+    <img src="logo1.png" alt="LegalTenderPay Left Logo">
+  </div>
+
+  <div class="logo-box logo-right-top">
+    <img src="logo2.png" alt="LegalTenderPay Right Logo">
+  </div>
+
+  <div class="logo-box logo-bottom-left">
+    <img src="logo3.png" alt="LegalTenderPay Bottom Left Logo">
+  </div>
 
 </body>
 </html>
